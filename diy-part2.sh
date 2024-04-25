@@ -18,8 +18,8 @@ echo '-----------------修改时区为东八区'
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 
-#echo '-----------------修改主机名为 Luban'
-#sed -i 's/OpenWrt/Luban/g' package/base-files/files/bin/config_generate
+echo '-----------------修改主机名为 Luban'
+sed -i 's/OpenWrt/jDcloud-re-sp01b/g' package/base-files/files/bin/config_generate
 
 #grep timezone -n5 package/base-files/files/bin/config_generate
 
@@ -90,5 +90,5 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
 # Modify default IP
-#sed -i 's/192.168.1.1/168.168.1.3/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.68.1/g' package/base-files/files/bin/config_generate
 
